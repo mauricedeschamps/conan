@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>名探偵コナン名言集 - 22 Quotes (日英独+ローマ字+音声)</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icons/icon-192.jpg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+
+    body.light {
+      background-color: #f5f7fa;
+      color: #1e293b;
+    }
+
+    .app-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header, footer {
+      width: 100%;
+    }
+
+    .header-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2d2d44;
+    }
+
+    body.light .header-bar {
+      border-bottom-color: #cbd5e1;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #f43f5e, #f97316);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      background: #2d2d44;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    body.light button {
+      background: #e2e8f0;
+      color: #1e293b;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: scale(0.97);
+    }
+
+    .lang-btn.active {
+      background: #f43f5e;
+      color: white;
+      box-shadow: 0 0 5px #f43f5e;
+    }
+
+    body.light .lang-btn.active {
+      background: #f43f5e;
+      color: white;
+    }
+
+    .sponsor {
+      background: rgba(255,255,255,0.05);
+      border: 1px dashed #f97316;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    body.light .sponsor {
+      background: #ffffffcc;
+      border-color: #f97316;
+    }
+
+    .sponsor-placeholder {
+      color: #f97316;
+      font-weight: bold;
+    }
+
+    .anime-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .card {
+      background: #1e1e2e;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    body.light .card {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #2c2c3a;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .detail-view {
+      background: #1e1e2e;
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      margin: 1rem 0;
+    }
+
+    body.light .detail-view {
+      background: #ffffff;
+    }
+
+    .detail-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-btn {
+      background: #f43f5e;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .official-link {
+      display: inline-block;
+      background: #3b82f6;
+      padding: 0.6rem 1.2rem;
+      border-radius: 2rem;
+      color: white;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .audio-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    .audio-btn {
+      background: #0f172a;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    body.light .audio-btn {
+      background: #cbd5e1;
+      color: #0f172a;
+    }
+    .audio-btn:hover {
+      opacity: 0.8;
+    }
+
+    .jp-romaji-block {
+      background: rgba(244, 63, 94, 0.15);
+      border-left: 4px solid #f43f5e;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-radius: 0.8rem;
+    }
+    .jp-original {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .romaji {
+      font-family: monospace;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid #2d2d44;
+    }
+
+    body.light footer {
+      border-top-color: #cbd5e1;
+    }
+
+    .email-link {
+      color: #f97316;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .anime-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .header-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="app-container" id="app">
+  <header>
+    <div class="header-bar">
+      <h1>🕵️ 名探偵コナン名言集 (22 Quotes)</h1>
+      <div class="btn-group">
+        <button id="themeToggle">🌓 ダーク/ライト</button>
+        <button id="langJp" class="lang-btn">🇯🇵 日本語</button>
+        <button id="langEn" class="lang-btn">🇬🇧 English</button>
+        <button id="LangDe" class="lang-btn">🇩🇪 Deutsch</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainPage">
+    <div class="sponsor" id="sponsorTop">
+      <div class="sponsor-placeholder">⭐ スポンサー枠 (後日イメージ + 公式サイトへ)</div>
+      <div style="font-size:0.8rem;">あなたの広告がここに入ります</div>
+    </div>
+
+    <div class="anime-grid" id="animeGrid"></div>
+
+    <div class="sponsor" id="sponsorBottom">
+      <div class="sponsor-placeholder">⭐ スポンサー枠 (後日イメージ + 公式サイトへ)</div>
+      <div style="font-size:0.8rem;">お問い合わせは footer から</div>
+    </div>
+  </main>
+
+  <div id="detailPage" class="hidden">
+    <button class="back-btn" id="backButton">← 戻る</button>
+    <div id="detailContent"></div>
+  </div>
+
+  <footer>
+    <p>Contact us<br><a href="mailto:mementomorikatsu@gmail.com" class="email-link">mementomorikatsu@gmail.com</a></p>
+  </footer>
+</div>
+
+<script>
+  // ---------- 名探偵コナン 22の名言データ ----------
+  const animeData = [
+    { id:1, title_jp:"真実はいつも一つ", title_en:"The truth is always one", title_de:"Die Wahrheit ist immer eine",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+1",
+      quote_jp:"真実はいつも一つ。", quote_jp_romaji:"Shinjitsu wa itsumo hitotsu.",
+      quote_en:"The truth is always one.", quote_de:"Die Wahrheit ist immer eine.",
+      explanation_jp:"コナンの決めゼリフ。事件の真相は必ず一つしかないという探偵の信念。",
+      explanation_en:"Conan's catchphrase. A detective's belief that there is only one truth to every case.",
+      explanation_de:"Conans Markenzeichen. Der Glaube eines Detektivs, dass es nur eine Wahrheit gibt.",
+      description_jp:"『名探偵コナン』は青山剛昌による推理漫画。高校生探偵・工藤新一が黒ずくめの組織の毒薬で小さくなり、江戸川コナンとして活躍する。",
+      description_en:"Detective Conan is a manga by Gosho Aoyama. High school detective Shinichi Kudo is shrunk by a poison and solves cases as Conan Edogawa.",
+      description_de:"Detektiv Conan ist ein Manga von Gosho Aoyama. Der Oberschuldetektiv Shinichi Kudo wird durch Gift geschrumpft und löst Fälle als Conan Edogawa.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:2, title_jp:"不可能を除外して残ったもの", title_en:"Eliminate the impossible", title_de:"Unmögliches ausschließen",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+2",
+      quote_jp:"不可能な物を除外していって残った物が…たとえどんなに信じられなくても…それが真相なんだ！！",
+      quote_jp_romaji:"Fukanou na mono wo joshai shite itte nokotta mono ga... tatoe donna ni shinjirare nakute mo... sore ga shinsou nanda!!",
+      quote_en:"When you have eliminated the impossible, whatever remains, however improbable, must be the truth.",
+      quote_de:"Wenn man das Unmögliche ausgeschlossen hat, muss das, was übrig bleibt, die Wahrheit sein, so unwahrscheinlich es auch ist.",
+      explanation_jp:"シャーロック・ホームズの言葉を引用。論理的思考の極意。",
+      explanation_en:"Quoting Sherlock Holmes. The essence of logical reasoning.",
+      explanation_de:"Zitat von Sherlock Holmes. Der Kern logischen Denkens.",
+      description_jp:"『名探偵コナン』は青山剛昌による推理漫画。高校生探偵・工藤新一が黒ずくめの組織の毒薬で小さくなり、江戸川コナンとして活躍する。",
+      description_en:"Detective Conan is a manga by Gosho Aoyama. High school detective Shinichi Kudo is shrunk by a poison and solves cases as Conan Edogawa.",
+      description_de:"Detektiv Conan ist ein Manga von Gosho Aoyama. Der Oberschuldetektiv Shinichi Kudo wird durch Gift geschrumpft und löst Fälle als Conan Edogawa.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:3, title_jp:"逃げるなよ灰原", title_en:"Don't run away, Haibara", title_de:"Lauf nicht weg, Haibara",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+3",
+      quote_jp:"逃げるなよ灰原…自分の運命から…逃げるんじゃねーぞ…", quote_jp_romaji:"Nigeru na yo Haibara... jibun no unmei kara... nigerun ja nee zo...",
+      quote_en:"Don't run away, Haibara... from your own destiny... don't run away.",
+      quote_de:"Lauf nicht weg, Haibara... vor deinem eigenen Schicksal... lauf nicht weg.",
+      explanation_jp:"灰原哀への励ましの言葉。運命から逃げずに立ち向かう勇気。",
+      explanation_en:"Encouragement to Ai Haibara. Courage to face your destiny without running.",
+      explanation_de:"Ermutigung für Ai Haibara. Mut, sich dem Schicksal zu stellen.",
+      description_jp:"『名探偵コナン』は青山剛昌による推理漫画。高校生探偵・工藤新一が黒ずくめの組織の毒薬で小さくなり、江戸川コナンとして活躍する。",
+      description_en:"Detective Conan is a manga by Gosho Aoyama. High school detective Shinichi Kudo is shrunk by a poison and solves cases as Conan Edogawa.",
+      description_de:"Detektiv Conan ist ein Manga von Gosho Aoyama. Der Oberschuldetektiv Shinichi Kudo wird durch Gift geschrumpft und löst Fälle als Conan Edogawa.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:4, title_jp:"言葉は刃物", title_en:"Words are blades", title_de:"Worte sind Klingen",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+4",
+      quote_jp:"言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。", quote_jp_romaji:"Kotoba wa hamono nanda. Tsukaikata wo machigaeru to, yakkai na kyouki ni naru.",
+      quote_en:"Words are blades. If you use them wrong, they become dangerous weapons.",
+      quote_de:"Worte sind Klingen. Wenn man sie falsch benutzt, werden sie zu gefährlichen Waffen.",
+      explanation_jp:"言葉の重みと責任を説いた名言。", explanation_en:"A quote about the weight and responsibility of words.",
+      explanation_de:"Ein Zitat über die Macht und Verantwortung von Worten.",
+      description_jp:"『名探偵コナン』は青山剛昌による推理漫画。高校生探偵・工藤新一が黒ずくめの組織の毒薬で小さくなり、江戸川コナンとして活躍する。",
+      description_en:"Detective Conan is a manga by Gosho Aoyama. High school detective Shinichi Kudo is shrunk by a poison and solves cases as Conan Edogawa.",
+      description_de:"Detektiv Conan ist ein Manga von Gosho Aoyama. Der Oberschuldetektiv Shinichi Kudo wird durch Gift geschrumpft und löst Fälle als Conan Edogawa.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:5, title_jp:"勇気という正義の言葉", title_en:"Courage, a word of justice", title_de:"Mut, ein Wort der Gerechtigkeit",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+5",
+      quote_jp:"勇気って言葉は身を振るい立たせて、勇気を奮い立たせる正義の言葉。人を殺す理由なんかに使っちゃ駄目。",
+      quote_jp_romaji:"Yuuki tte kotoba wa mi o furuitatete, yuuki o furuitateru seigi no kotoba. Hito o korosu riyuu nanka ni tsukaccha dame.",
+      quote_en:"Courage is a word of justice that inspires and empowers. Don't use it as a reason to kill.",
+      quote_de:"Mut ist ein Wort der Gerechtigkeit, das inspiriert und stärkt. Benutze es nicht als Grund zum Töten.",
+      explanation_jp:"正義としての勇気の使い方を説いた言葉。", explanation_en:"How courage should be used for justice, not murder.",
+      explanation_de:"Wie Mut für Gerechtigkeit verwendet werden sollte, nicht für Mord.",
+      description_jp:"『名探偵コナン』は青山剛昌による推理漫画。", description_en:"Detective Conan manga.", description_de:"Detektiv Conan Manga.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:6, title_jp:"完璧なんて存在しない", title_en:"Perfection doesn't exist", title_de:"Perfektion existiert nicht",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+6",
+      quote_jp:"完璧なんてこの世には、存在しねぇ。絶対何処かで歯車がかみ合わなくなる。",
+      quote_jp_romaji:"Kanzen nante kono yo ni wa, sonzai shinee. Zettai dokoka de haguruma ga kamiawanakunaru.",
+      quote_en:"Perfection doesn't exist in this world. Somewhere, gears will always fail to mesh.",
+      quote_de:"Perfektion existiert nicht in dieser Welt. Irgendwo werden die Zahnräder immer nicht ineinandergreifen.",
+      explanation_jp:"完璧主義へのアンチテーゼ。", explanation_en:"An antithesis to perfectionism.",
+      explanation_de:"Eine Antithese zum Perfektionismus.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:7, title_jp:"自殺させる探偵は殺人者", title_en:"Detective who causes suicide is a murderer", title_de:"Detektiv, der Selbstmord verursacht, ist Mörder",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+7",
+      quote_jp:"犯人を推理で追い詰めて、みすみす自殺させちまう探偵は…殺人者とかわんねーよ…",
+      quote_jp_romaji:"Hannin o suiri de oitsumete, misumisu jisatsu sasechima tantei wa... satsujinsha to kawannee yo...",
+      quote_en:"A detective who corners a culprit with reasoning and lets them commit suicide is no different from a murderer.",
+      quote_de:"Ein Detektiv, der den Täter in die Enge treibt und ihn Selbstmord begehen lässt, ist nicht anders als ein Mörder.",
+      explanation_jp:"探偵の倫理観を問う名台詞。", explanation_en:"A famous line questioning detective ethics.",
+      explanation_de:"Eine berühmte Zeile, die die Ethik von Detektiven hinterfragt.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:8, title_jp:"0は全ての始まり", title_en:"Zero is the beginning", title_de:"Null ist der Anfang",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+8",
+      quote_jp:"0はすべての始まり！そこから出発しねぇと何も生まれねぇし…何も達成できねぇって…", quote_jp_romaji:"Zero wa subete no hajimari! Soko kara shuppatsu shinee to nani mo umarenee shi... nani mo tassei dekinee tte...",
+      quote_en:"Zero is the beginning of everything! If you don't start from there, nothing is born, nothing is achieved.",
+      quote_de:"Null ist der Anfang von allem! Wenn du nicht von dort startest, wird nichts geboren, nichts erreicht.",
+      explanation_jp:"工藤新一の哲学。何もない状態から始める大切さ。", explanation_en:"Shinichi's philosophy: the importance of starting from nothing.",
+      explanation_de:"Shinichis Philosophie: die Bedeutung, von Null zu starten.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:9, title_jp:"麻薬と殺人は反則", title_en:"Drugs and murder are fouls", title_de:"Drogen und Mord sind Fouls",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+9",
+      quote_jp:"Drugs and murder are foul without any excuse... deserve a red card for a loser...", quote_jp_romaji:"Drugs and murder are foul without any excuse... deserve a red card for a loser...",
+      quote_en:"Drugs and murder are fouls without any excuse... deserve a red card for a loser.",
+      quote_de:"Drogen und Mord sind Fouls ohne Entschuldigung... verdienen eine rote Karte für einen Verlierer.",
+      explanation_jp:"英語混じりのコナンのセリフ。絶対に許せない行為。", explanation_en:"Conan's line mixing English. Unforgivable acts.",
+      explanation_de:"Conans Zeile mit Englisch. Unverzeihliche Taten.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:10, title_jp:"人の命は簡単に奪えない", title_en:"No life can be taken easily", title_de:"Kein Leben kann leicht genommen werden",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+10",
+      quote_jp:"簡単に奪っていい命なんて、この世にひとつもないんだから。", quote_jp_romaji:"Kantan ni ubatte ii inochi nante, kono yo ni hitotsu mo nain dakara.",
+      quote_en:"There isn't a single life in this world that can be taken easily.",
+      quote_de:"Es gibt kein einziges Leben auf dieser Welt, das leicht genommen werden darf.",
+      explanation_jp:"命の尊厳を説く言葉。", explanation_en:"A word about the dignity of life.",
+      explanation_de:"Ein Wort über die Würde des Lebens.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:11, title_jp:"人を助ける理由に論理はない", title_en:"No logic in helping others", title_de:"Keine Logik beim Helfen",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+11",
+      quote_jp:"人が人を助ける理由に…論理的な思考は存在しねーだろ？", quote_jp_romaji:"Hito ga hito o tasukeru riyuu ni... ronriteki na shikou wa sonzai shinee daro?",
+      quote_en:"There's no logical reasoning behind why people help others, right?",
+      quote_de:"Es gibt keine logische Begründung dafür, warum Menschen anderen helfen, oder?",
+      explanation_jp:"人間の善意は論理を超える。", explanation_en:"Human kindness transcends logic.",
+      explanation_de:"Menschliche Güte übertrifft die Logik.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:12, title_jp:"たった一つの真実が見える", title_en:"Only one truth prevails", title_de:"Nur eine Wahrheit siegt",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+12",
+      quote_jp:"たった一つの真実が見える。", quote_jp_romaji:"Tatta hitotsu no shinjitsu ga mieru.",
+      quote_en:"Only one truth prevails.", quote_de:"Nur eine Wahrheit siegt.",
+      explanation_jp:"アニメオープニングの名文句。", explanation_en:"Famous opening line of the anime.",
+      explanation_de:"Berühmte Eröffnungszeile des Animes.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:13, title_jp:"お前のことが好きだから", title_en:"Because I love you", title_de:"Weil ich dich liebe",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+13",
+      quote_jp:"オメーの事好きだからだよ。この地球上で誰よりも。", quote_jp_romaji:"Omee no koto suki dakara da yo. Kono chikyuu de dare yori mo.",
+      quote_en:"Because I love you. More than anyone else on this planet.",
+      quote_de:"Weil ich dich liebe. Mehr als jeder andere auf diesem Planeten.",
+      explanation_jp:"毛利蘭への告白。", explanation_en:"Confession to Ran Mouri.",
+      explanation_de:"Geständnis an Ran Mouri.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:14, title_jp:"もう遅い…あんたの負けだ", title_en:"Too late... you've lost", title_de:"Zu spät... du hast verloren",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+14",
+      quote_jp:"もう遅い…あんたの負けだ。", quote_jp_romaji:"Mou osoi... anta no make da.",
+      quote_en:"Too late... you've lost.", quote_de:"Zu spät... du hast verloren.",
+      explanation_jp:"犯人を追い詰めた時の決めゼリフ。", explanation_en:"Catchphrase when cornering the culprit.",
+      explanation_de:"Spruch, wenn der Täter in die Enge getrieben wird.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:15, title_jp:"工藤新一は俺の名前", title_en:"Kudo Shinichi is my name", title_de:"Kudo Shinichi ist mein Name",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+15",
+      quote_jp:"工藤新一は…俺の名前だ。", quote_jp_romaji:"Kudou Shinichi wa... ore no namae da.",
+      quote_en:"Kudo Shinichi is my name.", quote_de:"Kudo Shinichi ist mein Name.",
+      explanation_jp:"正体を明かす時の一言。", explanation_en:"Line when revealing his identity.",
+      explanation_de:"Zeile, wenn er seine Identität preisgibt.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:16, title_jp:"推理の上に立つ者こそ勝者", title_en:"Those who stand on reasoning are winners", title_de:"Diejenigen, die auf Logik stehen, sind Gewinner",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+16",
+      quote_jp:"推理の上に立つ者こそ勝者。", quote_jp_romaji:"Suiri no ue ni tatsu mono koso shousha.",
+      quote_en:"Those who stand on reasoning are the winners.",
+      quote_de:"Diejenigen, die auf Logik stehen, sind die Gewinner.",
+      explanation_jp:"推理の重要性を説く。", explanation_en:"Preaches the importance of reasoning.",
+      explanation_de:"Predigt die Bedeutung von Logik.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:17, title_jp:"諦めない限り勝負は終わらない", title_en:"The match isn't over as long as you don't give up", title_de:"Das Spiel ist nicht vorbei, solange du nicht aufgibst",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+17",
+      quote_jp:"諦めない限り、勝負はまだ終わらない。", quote_jp_romaji:"Akiramenai kagiri, shoubu wa mada owaranai.",
+      quote_en:"As long as you don't give up, the match isn't over yet.",
+      quote_de:"Solange du nicht aufgibst, ist das Spiel noch nicht vorbei.",
+      explanation_jp:"不屈の精神を表す。", explanation_en:"Expresses an indomitable spirit.",
+      explanation_de:"Drückt einen unbezwingbaren Geist aus.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:18, title_jp:"絶対に諦めない", title_en:"Never give up", title_de:"Niemals aufgeben",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+18",
+      quote_jp:"絶対に諦めないのが俺の忍道じゃないけど、探偵の使命だ。", quote_jp_romaji:"Zettai ni akiramenai no ga ore no nindou janai kedo, tantei no shimei da.",
+      quote_en:"Never giving up is not my ninja way, but it's a detective's mission.",
+      quote_de:"Niemals aufzugeben ist nicht mein Ninja-Weg, aber es ist die Mission eines Detektivs.",
+      explanation_jp:"ナルトへのオマージュと探偵の矜持。", explanation_en:"Homage to Naruto and detective pride.",
+      explanation_de:"Hommage an Naruto und Detektivstolz.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:19, title_jp:"事件に絶対はない", title_en:"There is no absolute in cases", title_de:"Es gibt kein Absolutes bei Fällen",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+19",
+      quote_jp:"事件に絶対はない。", quote_jp_romaji:"Jiken ni zettai wa nai.",
+      quote_en:"There is no absolute in cases.", quote_de:"Es gibt kein Absolutes bei Fällen.",
+      explanation_jp:"常に未知の可能性を考える姿勢。", explanation_en:"Always consider unknown possibilities.",
+      explanation_de:"Immer unbekannte Möglichkeiten in Betracht ziehen.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:20, title_jp:"嘘は最大の敵", title_en:"Lies are the greatest enemy", title_de:"Lügen sind der größte Feind",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+20",
+      quote_jp:"真実を求める者にとって、嘘は最大の敵だ。", quote_jp_romaji:"Shinjitsu o motomeru mono ni totte, uso wa saidai no teki da.",
+      quote_en:"For those who seek the truth, lies are the greatest enemy.",
+      quote_de:"Für diejenigen, die die Wahrheit suchen, sind Lügen der größte Feind.",
+      explanation_jp:"真実への妨害を糾弾。", explanation_en:"Denouncing interference with the truth.",
+      explanation_de:"Verurteilung der Einmischung in die Wahrheit.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:21, title_jp:"解けない謎なんてない", title_en:"No mystery can't be solved", title_de:"Kein Rätsel ist unlösbar",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+21",
+      quote_jp:"この世に解けない謎なんてない。", quote_jp_romaji:"Kono yo ni tokenai nazo nante nai.",
+      quote_en:"There's no mystery that can't be solved in this world.",
+      quote_de:"Es gibt kein Rätsel auf dieser Welt, das nicht gelöst werden kann.",
+      explanation_jp:"探偵の楽観主義。", explanation_en:"Detective optimism.",
+      explanation_de:"Detektiv-Optimismus.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" },
+    { id:22, title_jp:"命の重みは平等", title_en:"All lives are equal in weight", title_de:"Alle Leben sind gleich schwer",
+      image:"https://placehold.co/600x400/1e1e2e/f43f5e?text=Conan+22",
+      quote_jp:"どんな理由があろうと、人の命は平等に重いんだ。", quote_jp_romaji:"Donna riyuu ga arou to, hito no inochi wa byoudou ni omoi nda.",
+      quote_en:"No matter the reason, every human life is equally heavy.",
+      quote_de:"Egal aus welchem Grund, jedes Menschenleben ist gleich schwer.",
+      explanation_jp:"命の価値は変わらないという強いメッセージ。", explanation_en:"Strong message that the value of life does not change.",
+      explanation_de:"Starke Botschaft, dass der Wert des Lebens sich nicht ändert.",
+      description_jp:"『名探偵コナン』より。", description_en:"From Detective Conan.", description_de:"Aus Detektiv Conan.",
+      official_url:"https://www.conan-portal.com/" }
+    ];
+
+  // ---------- グローバル ----------
+  let currentLang = 'jp';
+  let currentTheme = 'dark';
+  let showingDetail = false;
+  let currentAnimeId = null;
+
+  const mainPage = document.getElementById('mainPage');
+  const detailPage = document.getElementById('detailPage');
+  const animeGrid = document.getElementById('animeGrid');
+  const detailContent = document.getElementById('detailContent');
+  const themeToggle = document.getElementById('themeToggle');
+  const langJpBtn = document.getElementById('langJp');
+  const langEnBtn = document.getElementById('langEn');
+  const langDeBtn = document.getElementById('LangDe');
+  const backButton = document.getElementById('backButton');
+
+  function speakText(text, langCode) {
+    if (!text) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = langCode;
+    utterance.rate = 0.9;
+    utterance.pitch = 1.0;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function setTheme(theme) {
+    currentTheme = theme;
+    if (theme === 'light') document.body.classList.add('light');
+    else document.body.classList.remove('light');
+    localStorage.setItem('animeTheme', theme);
+  }
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('animeLang', lang);
+    langJpBtn.classList.remove('active');
+    langEnBtn.classList.remove('active');
+    langDeBtn.classList.remove('active');
+    if (lang === 'jp') langJpBtn.classList.add('active');
+    else if (lang === 'en') langEnBtn.classList.add('active');
+    else if (lang === 'de') langDeBtn.classList.add('active');
+    
+    if (!showingDetail) renderMainGrid();
+    else renderDetailView(currentAnimeId);
+  }
+
+  function renderMainGrid() {
+    animeGrid.innerHTML = '';
+    animeData.forEach(anime => {
+      let title = '';
+      if (currentLang === 'jp') title = anime.title_jp;
+      else if (currentLang === 'en') title = anime.title_en;
+      else title = anime.title_de;
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img class="card-img" src="${anime.image}" alt="${title}" loading="lazy" onerror="this.src='https://placehold.co/600x400/2d2d44/f97316?text=No+Image'">
+        <div class="card-content">
+          <div class="card-title">${escapeHtml(title)}</div>
+          <div style="font-size:0.85rem; opacity:0.8;">${currentLang === 'jp' ? 'クリックで名言詳細' : (currentLang === 'en' ? 'Click for quote details' : 'Klicken für Zitatdetails')}</div>
+        </div>
+      `;
+      card.addEventListener('click', () => showDetail(anime.id));
+      animeGrid.appendChild(card);
+    });
+  }
+
+  function renderDetailView(animeId) {
+    const anime = animeData.find(a => a.id === animeId);
+    if (!anime) return;
+    currentAnimeId = animeId;
+    
+    let title = '', description = '', explanation = '', translatedQuote = '', quoteLangCode = '';
+    if (currentLang === 'jp') {
+      title = anime.title_jp;
+      description = anime.description_jp;
+      explanation = anime.explanation_jp;
+      translatedQuote = anime.quote_jp;
+      quoteLangCode = 'ja-JP';
+    } else if (currentLang === 'en') {
+      title = anime.title_en;
+      description = anime.description_en;
+      explanation = anime.explanation_en;
+      translatedQuote = anime.quote_en;
+      quoteLangCode = 'en-US';
+    } else {
+      title = anime.title_de;
+      description = anime.description_de;
+      explanation = anime.explanation_de;
+      translatedQuote = anime.quote_de;
+      quoteLangCode = 'de-DE';
+    }
+    
+    const detailHtml = `
+      <div class="detail-view">
+        <img class="detail-img" src="${anime.image}" alt="${title}" onerror="this.src='https://placehold.co/800x400/2d2d44/f97316?text=Image+Not+Found'">
+        <h2>${escapeHtml(title)}</h2>
+        <p><strong>📖 ${currentLang === 'jp' ? '作品紹介' : (currentLang === 'en' ? 'Series Description' : 'Serienbeschreibung')}:</strong> ${escapeHtml(description)}</p>
+        
+        <div class="jp-romaji-block">
+          <div class="jp-original">🇯🇵 ${escapeHtml(anime.quote_jp)}</div>
+          <div class="romaji">🔊 <em>${escapeHtml(anime.quote_jp_romaji)}</em> (Romaji)</div>
+        </div>
+        
+        <div style="background:#f43f5e20; padding:1rem; border-radius:1rem; margin:1rem 0;">
+          <p><strong>💬 ${currentLang === 'jp' ? '名言' : (currentLang === 'en' ? 'Translated Quote' : 'Übersetztes Zitat')}:</strong><br>“${escapeHtml(translatedQuote)}”</p>
+          <p><strong>📝 ${currentLang === 'jp' ? '解説' : (currentLang === 'en' ? 'Learning Point' : 'Erklärung')}:</strong> ${escapeHtml(explanation)}</p>
+        </div>
+        
+        <div class="audio-buttons">
+          <button class="audio-btn" id="speakJpBtn">🔊 日本語 (Romaji読み)</button>
+          <button class="audio-btn" id="speakEnBtn">🔊 English</button>
+          <button class="audio-btn" id="speakDeBtn">🔊 Deutsch</button>
+        </div>
+        
+        <a href="${anime.official_url}" target="_blank" rel="noopener noreferrer" class="official-link">🔗 ${currentLang === 'jp' ? '公式サイト' : (currentLang === 'en' ? 'Official Site' : 'Offizielle Seite')}</a>
+      </div>
+    `;
+    detailContent.innerHTML = detailHtml;
+    
+    document.getElementById('speakJpBtn')?.addEventListener('click', (e) => { e.stopPropagation(); speakText(anime.quote_jp, 'ja-JP'); });
+    document.getElementById('speakEnBtn')?.addEventListener('click', (e) => { e.stopPropagation(); speakText(anime.quote_en, 'en-US'); });
+    document.getElementById('speakDeBtn')?.addEventListener('click', (e) => { e.stopPropagation(); speakText(anime.quote_de, 'de-DE'); });
+  }
+
+  function showDetail(id) {
+    showingDetail = true;
+    renderDetailView(id);
+    mainPage.classList.add('hidden');
+    detailPage.classList.remove('hidden');
+    window.scrollTo(0,0);
+  }
+
+  function goBack() {
+    showingDetail = false;
+    mainPage.classList.remove('hidden');
+    detailPage.classList.add('hidden');
+    renderMainGrid();
+    window.scrollTo(0,0);
+    window.speechSynthesis.cancel();
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>]/g, function(m) {
+      if (m === '&') return '&amp;';
+      if (m === '<') return '&lt;';
+      if (m === '>') return '&gt;';
+      return m;
+    });
+  }
+
+  themeToggle.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+  langJpBtn.addEventListener('click', () => setLanguage('jp'));
+  langEnBtn.addEventListener('click', () => setLanguage('en'));
+  langDeBtn.addEventListener('click', () => setLanguage('de'));
+  backButton.addEventListener('click', goBack);
+
+  function init() {
+    const savedTheme = localStorage.getItem('animeTheme');
+    if (savedTheme === 'light') setTheme('light');
+    else setTheme('dark');
+    const savedLang = localStorage.getItem('animeLang');
+    if (savedLang === 'en') setLanguage('en');
+    else if (savedLang === 'de') setLanguage('de');
+    else setLanguage('jp');
+    renderMainGrid();
+  }
+  init();
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(reg => console.log('SW registered', reg)).catch(err => console.log('SW failed', err));
+  }
+</script>
+</body>
+</html>
