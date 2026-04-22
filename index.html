@@ -277,7 +277,7 @@
 <div class="app-container" id="app">
   <header>
     <div class="header-bar">
-      <h1>🕵️ 名探偵コナン名言集 (22 Quotes)</h1>
+      <h1 id="mainTitle">🕵️ 名探偵コナン名言集 (22 Quotes)</h1>
       <div class="btn-group">
         <button id="themeToggle">🌓 ダーク/ライト</button>
         <button id="langJp" class="lang-btn">🇯🇵 日本語</button>
@@ -539,6 +539,14 @@
   const langEnBtn = document.getElementById('langEn');
   const langDeBtn = document.getElementById('LangDe');
   const backButton = document.getElementById('backButton');
+  const mainTitle = document.getElementById('mainTitle');
+
+  // タイトルの多言語辞書
+  const titleStrings = {
+    jp: "🕵️ 名探偵コナン名言集 (22名言)",
+    en: "🕵️ Detective Conan Quotes Collection (22 Quotes)",
+    de: "🕵️ Detektiv Conan Zitatensammlung (22 Zitate)"
+  };
 
   function speakText(text, langCode) {
     if (!text) return;
@@ -557,6 +565,12 @@
     localStorage.setItem('animeTheme', theme);
   }
 
+  function updateTitle() {
+    if (currentLang === 'jp') mainTitle.textContent = titleStrings.jp;
+    else if (currentLang === 'en') mainTitle.textContent = titleStrings.en;
+    else mainTitle.textContent = titleStrings.de;
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('animeLang', lang);
@@ -566,6 +580,8 @@
     if (lang === 'jp') langJpBtn.classList.add('active');
     else if (lang === 'en') langEnBtn.classList.add('active');
     else if (lang === 'de') langDeBtn.classList.add('active');
+    
+    updateTitle();  // ヘッダータイトルを更新
     
     if (!showingDetail) renderMainGrid();
     else renderDetailView(currentAnimeId);
